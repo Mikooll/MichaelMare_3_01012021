@@ -1,0 +1,19 @@
+{
+  "name": "michaelmare_3_01012021",
+  "version": "1.0.0",
+  "description": "Projet 3 OpenClassrooms",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mikooll/MichaelMare_3_01012021.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mikooll/MichaelMare_3_01012021/issues"
+  },
+  "homepage": "https://github.com/Mikooll/MichaelMare_3_01012021#readme"
+}
