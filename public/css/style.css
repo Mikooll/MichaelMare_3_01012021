@@ -9,4 +9,144 @@ body {
   position: relative;
 }
 
+.city {
+  display: flex;
+  justify-content: center;
+  padding: 1.3rem 1rem;
+  background-color: #EAEAEA;
+  font-size: 1.2rem;
+  position: relative;
+}
+.city__icon {
+  margin-right: 1rem;
+}
+.city__text {
+  font-weight: 700;
+}
+
+.explore {
+  padding: 2rem;
+  text-align: center;
+  background-color: #F6F6F6;
+}
+.explore__title {
+  margin: 0;
+}
+.explore__subtitle {
+  font-weight: lighter;
+  margin: 1.5rem 0;
+  color: #414141;
+}
+.explore__btn {
+  border: 0;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  border-radius: 100px;
+  color: white;
+  background-color: #686868;
+  background-image: linear-gradient(0deg, #9356DC 40%, #FF79DA 100%);
+  cursor: pointer;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
+}
+.explore__btn:hover {
+  background-color: white;
+  box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+}
+
+.how {
+  padding: 2rem 1rem;
+}
+.how__title {
+  margin-top: 0;
+}
+.how__options {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  counter-reset: myCount;
+}
+.how__options__option {
+  padding: 1.5rem;
+  margin: 1rem 0 1rem 0.75rem;
+  box-shadow: 0.25rem 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.16);
+  border-radius: 1.25rem;
+  background-color: #F6F6F6;
+  display: flex;
+  position: relative;
+}
+.how__options__option::before {
+  counter-increment: myCount 1;
+  content: counter(myCount) " ";
+  position: absolute;
+  left: -0.65rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #9356DC;
+  font-size: 1rem;
+  font-size: 0.8rem;
+  font-weight: lighter;
+}
+.how__options__option:hover {
+  background-color: #F5EDFF;
+}
+.how__options__option:hover .how__icon {
+  color: #9356DC;
+}
+.how__icon {
+  margin: 0 1.5rem 0 0.8rem;
+  color: #7F7E7F;
+}
+
+.restaurants {
+  background-color: #F6F6F6;
+  padding: 3rem 1rem;
+}
+
+.restaurants__cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  margin-bottom: 1.5rem;
+  color: black;
+  text-decoration: none;
+}
+.card__img {
+  height: 12rem;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.card__new {
+  background-color: #99E2D0;
+  color: #217460;
+  padding: 0.45rem 0.8rem;
+  border-radius: 0.2rem;
+  position: absolute;
+  top: 0.8rem;
+  right: 1rem;
+}
+.card__bottom {
+  padding: 0 1rem 1rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card__title {
+  margin-bottom: 0.3rem;
+}
+.card__subtitle {
+  margin-bottom: 1rem;
+}
+
 /*# sourceMappingURL=style.css.map */

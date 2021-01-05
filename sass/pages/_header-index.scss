@@ -1,2 +1,151 @@
+.city {
+    display: flex;
+    justify-content: center;
+    padding: 1.3rem 1rem;
+    background-color: $background-primary;
+    font-size: 1.2rem;
+    position: relative;
+
+    &__icon {
+        margin-right: 1rem;
+    }
+
+    &__text {
+        font-weight: 700;
+    }
+}
+
+.explore {
+    padding: 2rem;
+    text-align: center;
+    background-color: $background-secondary;
 
 
+    &__title {
+        margin: 0;
+    }
+
+    &__subtitle {
+        font-weight: lighter;
+        margin: 1.5rem 0;
+        color: #414141;
+    }
+
+    &__btn {
+        @include button();
+    }
+}
+
+.how {
+    padding: 2rem 1rem;
+
+    &__title {
+        margin-top: 0;
+    }
+
+    &__options {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        counter-reset: myCount;
+
+        &__option {
+            padding: 1.5rem;
+            margin: 1rem 0 1rem 0.75rem;
+            box-shadow: 0.25rem 0.25rem 0.5rem 0 rgba(0, 0, 0, 0.16);
+            border-radius: 1.25rem;
+            background-color: $background-secondary;
+            display: flex;
+            position: relative;
+
+            &::before {
+                counter-increment: myCount 1;
+                content: counter(myCount) " ";
+                position: absolute;
+                left: -0.65rem;
+                height: 1.5rem;
+                width: 1.5rem;
+                border-radius: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                background-color: $color-primary;
+                font-size: 1rem;
+                font-size: .8rem;
+                font-weight: lighter;
+            }
+
+            &:hover {
+                background-color: #F5EDFF;
+
+                .how__icon {
+                    color: $color-primary;
+                }
+            }
+        }
+
+    }
+
+    &__icon {
+        margin: 0 1.5rem 0 .8rem;
+        color: #7F7E7F;
+    }
+
+}
+
+.restaurants {
+    background-color: $background-secondary;
+    padding: 3rem 1rem;
+}
+
+.restaurants__cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    background-color: white;
+    border-radius: 1rem;
+    position: relative;
+    margin-bottom: 1.5rem;
+    color: black;
+    text-decoration: none;
+
+    &__img {
+        height: 12rem;
+        width: 100%;
+        object-fit: cover;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+    }
+
+    &__new {
+        background-color: $color-tertiary;
+        color: darken($color-tertiary, 45%);
+        padding: 0.45rem .8rem;
+        border-radius: .2rem;
+        position: absolute;
+        top: .8rem;
+        right: 1rem;
+    }
+
+    &__bottom {
+        padding: 0 1rem 1rem 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        margin-bottom: .3rem;
+    }
+
+    &__subtitle {
+        margin-bottom: 1rem;
+    }
+
+    &__like:hover {
+        // background-color: ;
+    }
+}
