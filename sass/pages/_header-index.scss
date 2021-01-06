@@ -96,7 +96,7 @@
 
 .restaurants {
     background-color: $background-secondary;
-    padding: 3rem 1rem;
+    padding: 2.5rem 1rem;
 }
 
 .restaurants__cards {
@@ -145,7 +145,31 @@
         margin-bottom: 1rem;
     }
 
-    &__like:hover {
-        // background-color: ;
+    &__like {
+        font-size: 1.7rem;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        background-color: white;
+        border: none;
+
+        &__out {
+            display: none;
+            color: $color-primary;
+            cursor: pointer;
+        }
+
+        &:hover {
+            .card__like__in {
+                display: none;
+            }
+
+            .card__like__out {
+                display: inline;
+            }
+        }
+
     }
 }
