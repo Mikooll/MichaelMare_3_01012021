@@ -102,4 +102,103 @@
             border-bottom: 3px solid $color-tertiary;
         }
     }
+
+    &__item {
+        display: flex;
+        justify-content: space-between;
+        background-color: white;
+        padding: 1rem;
+        margin: 1rem 0;
+        border-radius: 1rem;
+        box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        cursor: pointer;
+
+        &__header {
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        &__title {
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        &__description {
+            margin: 0;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+
+        &__price {
+            font-weight: 500;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-end;
+        }
+
+        &__confirm {
+            background-color: $color-tertiary;
+            width: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -1rem -1rem -1rem 0.5rem;
+            transition-duration: .5s;
+        }
+
+        &:hover &__confirm {
+            margin-right: -1rem;
+        }
+
+        &__container {
+            transform: rotate(180deg);
+            transition-duration: .5s;
+        }
+
+        &__icon {
+            background-color: white;
+            color: $color-tertiary;
+            border-radius: 100%;
+            padding: .2rem;
+            transform: rotate(180deg);
+            transition-duration: .5s;
+        }
+
+        &:hover &__icon {
+            transform: rotate(540deg);
+        }
+    }
 }
+
+@for $i from 0 to 9 {
+    .delay-#{$i} {
+        animation-delay: #{$i/10}s;
+    }
+}
+
+.order {
+    display: flex;
+    text-decoration: none;
+    justify-content: center;
+    padding: 3rem 0;
+
+    &__btn {
+        @include button();
+        cursor: pointer;
+    }
+}
+
+@keyframes itemAppear {
+    0% {
+      transform: scale(0)
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
