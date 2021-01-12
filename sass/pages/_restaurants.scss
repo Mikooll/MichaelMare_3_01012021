@@ -113,6 +113,13 @@
         box-shadow: .25rem .25rem 1rem rgba(0, 0, 0, 0.1);
         overflow: hidden;
         cursor: pointer;
+        position: relative;
+        transition: 1s;
+
+        &:hover {
+            padding-right: 5rem;
+            transition: cubic-bezier(.66,.23,.97,.01);
+        }
 
         &__header {
             margin: 0;
@@ -138,27 +145,31 @@
         &__price {
             font-weight: 500;
             display: flex;
-            justify-content: flex-end;
+            // justify-content: flex-end;
             align-items: flex-end;
         }
 
+        &:hover + &__price {
+            margin-right: 10rem;
+        }
+
         &__confirm {
+            position: absolute;
             background-color: $color-tertiary;
             width: 4rem;
+            height: 5rem;
             display: flex;
             align-items: center;
             justify-content: center;
             margin: -1rem -1rem -1rem 0.5rem;
-            transition-duration: .5s;
+            transition: 1s;
+            right: -4rem;
         }
 
         &:hover &__confirm {
             margin-right: -1rem;
-        }
-
-        &__container {
-            transform: rotate(180deg);
-            transition-duration: .5s;
+            transition: 1s;
+            right: 1rem;
         }
 
         &__icon {
@@ -166,21 +177,18 @@
             color: $color-tertiary;
             border-radius: 100%;
             padding: .2rem;
-            transform: rotate(180deg);
-            transition-duration: .5s;
+            transform: rotate(0deg);
+            transition-duration: 2s;
         }
 
         &:hover &__icon {
-            transform: rotate(540deg);
+            transform: rotate(360deg);
+            transition: 2s;
         }
+
     }
 }
 
-@for $i from 0 to 9 {
-    .delay-#{$i} {
-        animation-delay: #{$i/10}s;
-    }
-}
 
 .order {
     display: flex;
@@ -189,16 +197,7 @@
     padding: 3rem 0;
 
     &__btn {
-        @include button();
+        @include button-colored;
         cursor: pointer;
     }
 }
-
-@keyframes itemAppear {
-    0% {
-      transform: scale(0)
-    }
-    100% {
-      transform: scale(1);
-    }
-  }

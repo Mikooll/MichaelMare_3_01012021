@@ -90,16 +90,15 @@ body {
   border: 0;
   padding: 1rem 1.5rem;
   font-size: 1.1rem;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   color: white;
-  background-color: #686868;
   background-image: linear-gradient(0deg, #9356DC 40%, #FF79DA 100%);
   cursor: pointer;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
 }
 .explore__btn:hover {
-  background-color: white;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(0deg, #985ede 40%, #ff83dd 100%);
 }
 
 .how {
@@ -341,6 +340,12 @@ body {
   box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
   overflow: hidden;
   cursor: pointer;
+  position: relative;
+  transition: 1s;
+}
+.content__item:hover {
+  padding-right: 5rem;
+  transition: cubic-bezier(0.66, 0.23, 0.97, 0.01);
 }
 .content__item__header {
   margin: 0;
@@ -363,71 +368,39 @@ body {
 .content__item__price {
   font-weight: 500;
   display: flex;
-  justify-content: flex-end;
   align-items: flex-end;
 }
+.content__item:hover + .content__item__price {
+  margin-right: 10rem;
+}
 .content__item__confirm {
+  position: absolute;
   background-color: #99E2D0;
   width: 4rem;
+  height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: -1rem -1rem -1rem 0.5rem;
-  transition-duration: 0.5s;
+  transition: 1s;
+  right: -4rem;
 }
 .content__item:hover .content__item__confirm {
   margin-right: -1rem;
-}
-.content__item__container {
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
+  transition: 1s;
+  right: 1rem;
 }
 .content__item__icon {
   background-color: white;
   color: #99E2D0;
   border-radius: 100%;
   padding: 0.2rem;
-  transform: rotate(180deg);
-  transition-duration: 0.5s;
+  transform: rotate(0deg);
+  transition-duration: 2s;
 }
 .content__item:hover .content__item__icon {
-  transform: rotate(540deg);
-}
-
-.delay-0 {
-  animation-delay: 0s;
-}
-
-.delay-1 {
-  animation-delay: 0.1s;
-}
-
-.delay-2 {
-  animation-delay: 0.2s;
-}
-
-.delay-3 {
-  animation-delay: 0.3s;
-}
-
-.delay-4 {
-  animation-delay: 0.4s;
-}
-
-.delay-5 {
-  animation-delay: 0.5s;
-}
-
-.delay-6 {
-  animation-delay: 0.6s;
-}
-
-.delay-7 {
-  animation-delay: 0.7s;
-}
-
-.delay-8 {
-  animation-delay: 0.8s;
+  transform: rotate(360deg);
+  transition: 2s;
 }
 
 .order {
@@ -440,26 +413,16 @@ body {
   border: 0;
   padding: 1rem 1.5rem;
   font-size: 1.1rem;
-  border-radius: 100px;
+  border-radius: 6.25rem;
   color: white;
-  background-color: #686868;
   background-image: linear-gradient(0deg, #9356DC 40%, #FF79DA 100%);
   cursor: pointer;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   cursor: pointer;
 }
 .order__btn:hover {
-  background-color: white;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
-}
-
-@keyframes itemAppear {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
+  background-image: linear-gradient(0deg, #985ede 40%, #ff83dd 100%);
 }
 
 /*# sourceMappingURL=style.css.map */
