@@ -189,7 +189,6 @@
     }
 }
 
-
 .order {
     display: flex;
     text-decoration: none;
@@ -199,5 +198,25 @@
     &__btn {
         @include button-colored;
         cursor: pointer;
+    }
+}
+
+@for $x from 0 to 8 {
+    .delay-#{$x} {
+        animation: delay #{$x}s;
+    }
+}
+
+@keyframes delay {
+    0% {
+        opacity: 0;
+        transform: translateY(+9999px);
+    }
+    20% {
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        
     }
 }
