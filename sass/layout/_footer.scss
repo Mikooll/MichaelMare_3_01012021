@@ -38,5 +38,15 @@
         width: 1.2rem;
         margin-right: .5rem;
     }
+}
 
+@media (min-width: 768px) {
+    .footer{
+        text-align: center;
+        font-size: larger;
+
+        &__logo {
+            font-size: 1.5rem;
+        }
+    }
 }

@@ -4,7 +4,17 @@
 }
 
 .logo_menu {
-    margin-left: 5.7rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 1900px) {
+    .logo_menu {
+        font-size: 2.5rem;
+    }
+}
+
+.arrow {
+    color: black;
 }
 
 .resto__image {
@@ -81,6 +91,19 @@
     }
 }
 
+@media (min-width: 1025px) {
+    .menu__contents {
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+@media (min-width: 1600px) {
+    .menu__contents {
+        font-size: larger;
+    }
+}
+
 .content {
     width: auto;
     overflow: hidden;
@@ -118,7 +141,7 @@
 
         &:hover {
             padding-right: 5rem;
-            transition: cubic-bezier(.66,.23,.97,.01);
+            // transition: cubic-bezier(.66,.23,.97,.01);
         }
 
         &__header {
@@ -145,7 +168,6 @@
         &__price {
             font-weight: 500;
             display: flex;
-            // justify-content: flex-end;
             align-items: flex-end;
         }
 
@@ -179,13 +201,21 @@
             padding: .2rem;
             transform: rotate(0deg);
             transition-duration: 2s;
+            transition-delay: 1s;
         }
 
         &:hover &__icon {
             transform: rotate(360deg);
-            transition: 2s;
+            transition: .5s;
+            transition-delay: .4s;
         }
 
+    }
+}
+
+@media (min-width: 1025px) {
+    .content {
+        width: 100%;
     }
 }
 
@@ -201,7 +231,7 @@
     }
 }
 
-@for $x from 0 to 8 {
+@for $x from 0 to 9 {
     .delay-#{$x} {
         animation: delay #{$x}s;
     }
