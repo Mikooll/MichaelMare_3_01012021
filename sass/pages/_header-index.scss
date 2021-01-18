@@ -36,6 +36,21 @@
     }
 }
 
+@media (min-width: 1900px) {
+    .explore {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        &__btn {
+            order: 2;
+        }
+
+        &__subtitle {
+            order: 3;
+        }
+    }
+}
+
 .how {
     padding: 2rem 1rem;
 
@@ -102,10 +117,22 @@
     }
 }
 
+@media (min-width: 1900px) {
+    .how__title {
+        text-align: center;
+    }
+} 
+
 .restaurants {
     background-color: $background-secondary;
     padding: 2.5rem 1rem;
 }
+
+@media (min-width: 1900px) {
+    .restaurants__title {
+        text-align: center;
+    }
+} 
 
 .restaurants__cards {
     display: flex;
