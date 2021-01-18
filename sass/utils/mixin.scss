@@ -1,7 +1,10 @@
 
 @mixin button-colored {
     border: 0;
-    padding: 1rem 1.5rem;
+    padding: 1rem .5rem;
+    width: 14rem;
+    text-decoration: none;
+    text-align: center;
     font-size: 1.1rem;
     border-radius: 6.25rem;
     color: white;

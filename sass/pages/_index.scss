@@ -1,13 +1,15 @@
 .city {
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 1.3rem 1rem;
     background-color: $background-primary;
-    font-size: 1.2rem;
+    font-size: .8rem;
     position: relative;
 
     &__icon {
         margin-right: 1rem;
+        font-size: 1.3rem;
     }
 
     &__text {
@@ -33,6 +35,8 @@
 
     &__btn {
         @include button-colored;
+        margin: 0 auto;
+        padding-top: 1.5rem;
     }
 }
 
@@ -101,7 +105,6 @@
         }
 
     }
-
 
     &__icon {
         margin: 0 1.5rem 0 .8rem;
