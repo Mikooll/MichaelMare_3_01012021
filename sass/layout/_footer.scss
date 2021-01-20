@@ -42,11 +42,26 @@
 
 @media (min-width: 768px) {
     .footer{
-        text-align: center;
         font-size: larger;
+        display: flex;
 
         &__logo {
-            font-size: 1.5rem;
+            font-size: 2rem;
+            margin-left: 1rem;
+        }
+    }
+}
+
+@media (min-width: 1900px) {
+    .footer {
+        font-size: 2rem;
+
+        &__logo {
+            font-size: 3rem;
+        }
+
+        &__icon {
+            margin-right: 1.5rem;
         }
     }
 }

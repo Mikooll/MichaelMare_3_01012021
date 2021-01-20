@@ -104,11 +104,23 @@ body {
 
 @media (min-width: 768px) {
   .footer {
-    text-align: center;
     font-size: larger;
+    display: flex;
   }
   .footer__logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    margin-left: 1rem;
+  }
+}
+@media (min-width: 1900px) {
+  .footer {
+    font-size: 2rem;
+  }
+  .footer__logo {
+    font-size: 3rem;
+  }
+  .footer__icon {
+    margin-right: 1.5rem;
   }
 }
 .city {
@@ -154,13 +166,20 @@ body {
   cursor: pointer;
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.25);
   margin: 0 auto;
-  padding-top: 1.5rem;
+  padding: 1rem;
 }
 .explore__btn:hover {
   box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(0deg, #985ede 40%, #ff83dd 100%);
 }
 
+@media (max-width: 1900px) {
+  .explore__subtitle {
+    margin: 3.5rem 0;
+    font-weight: normal;
+    font-size: larger;
+  }
+}
 @media (min-width: 1900px) {
   .explore {
     display: grid;
@@ -168,6 +187,7 @@ body {
   }
   .explore__btn {
     order: 2;
+    padding-top: 1.5rem;
   }
   .explore__subtitle {
     order: 3;
@@ -207,7 +227,6 @@ body {
   align-items: center;
   color: white;
   background-color: #9356DC;
-  font-size: 1rem;
   font-size: 0.8rem;
   font-weight: lighter;
 }
@@ -226,6 +245,20 @@ body {
   .how__options {
     display: flex;
     justify-content: space-around;
+  }
+  .how__options__option__text {
+    margin-top: 0.2rem;
+  }
+  .how__options__option::before {
+    top: 1.5rem;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.7rem;
+    font-weight: normal;
+  }
+
+  .how__icon {
+    font-size: 1.8rem;
   }
 }
 @media (min-width: 1900px) {
